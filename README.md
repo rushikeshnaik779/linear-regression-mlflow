@@ -58,5 +58,12 @@ Numbers come from the seeded dataset (seed 42), so they should reproduce exactly
 ## Files
 
 - `make_dataset.py`: generates the synthetic data.
-- `train.py`: preprocessing pipelines, training, CV, and MLflow logging.
+- `train.py`: entry point. Calls `src.pipeline.main`.
+- `src/config.py`: constants and paths.
+- `src/data.py`: loading, hashing, and the train/test split.
+- `src/features.py`: preprocessing pipeline.
+- `src/experiments.py`: the five model variants.
+- `src/tracking.py`: CV and test evaluation, MLflow logging, champion registration.
+- `src/pipeline.py`: end-to-end orchestration.
+- `.claude/CLAUDE.md`: project rules for Claude.
 - `mlflow.db`, `mlartifacts/`: created on first run. The tracking store and model artifacts.
